@@ -1,0 +1,20 @@
+	</div>
+	<!-- /BODY -->
+	<footer class="footer">
+		<p class="power">
+			Powered by <strong>Rhymix {__XE_VERSION__}</strong>
+			<!--@if(isset($released_version))-->
+				<span class="vr">|</span> Latest version: <a href="{htmlspecialchars(html_entity_decode($download_link), ENT_COMPAT | ENT_HTML401, 'UTF-8', false)}" target="_blank">{$released_version}</a>
+			<!--@end-->
+		</p>
+		<p class="cache">
+			<button type="button" class="x_btn-link" onclick="doResetAdminMenu();">{$lang->cmd_admin_menu_reset}</button> <span class="vr">|</span>  
+			<button type="button" class="x_btn-link" onclick="doRecompileCacheFile();">{$lang->cmd_remake_cache}</button> <span class="vr">|</span> 
+			<button type="button" class="x_btn-link" onclick="doClearSession();">{$lang->cmd_clear_session}</button> <span class="vr">|</span> 
+			<a href="./index.php?module=admin&act=dispAdminViewServerEnv" style="vertical-align:middle">{$lang->cmd_view_server_env}</a> <span class="vr">|</span> 
+			<a href="https://github.com/rhymix/rhymix/issues" target="_blank" style="vertical-align:middle">{$lang->bug_report}</a>
+		</p>
+	</footer>
+</div>
+<load target="./js/config.js" usecdn="true" />
+<load target="../../session/tpl/js/session.js" usecdn="true" />
